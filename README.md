@@ -128,6 +128,7 @@ Links that I've used to make Lisk-Core available on a Raspberry pi:
 - https://pastebin.com/nmgtawca
 - https://lisk.io/documentation/lisk-core/setup/source
 - https://www.raspberrypi.org/forums/viewtopic.php?t=211528
+- https://github.com/S3x0r/Lisk-Core-FreeBSD
 
 If you need more help contact me on [lisk.chat](https://lisk.chat/direct/zOwn3Ds).
 Feel free to give a small donation if this was helpfull to make Lisk-Core available on your Raspberry pi on: `12056889420610179211L`.
