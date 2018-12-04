@@ -122,11 +122,23 @@ Or on mainnet:
 
 Check once again in your logs to see if everything is working.
 
+## Updating Lisk-Core
+
+When you want to update Lisk-Core you must stop the PM2 process and pull the latest tagged release from GitHub. After that you must start the PM2 process again. You can do it by using the following commands:
+
+```
+pm2 stop lisk
+git pull testnet-master
+npm install
+pm2 start lisk
+```
+
 Links that I've used to make Lisk-Core available on a Raspberry pi:
 - https://www.postgresql.org/docs/9.4/backup-dump.html
 - http://snapshots.lisk.io.s3-eu-west-1.amazonaws.com/index.html?prefix=lisk/test/
 - https://pastebin.com/nmgtawca
 - https://lisk.io/documentation/lisk-core/setup/source
+- https://lisk.io/documentation/lisk-core/upgrade/source
 - https://www.raspberrypi.org/forums/viewtopic.php?t=211528
 - https://github.com/S3x0r/Lisk-Core-FreeBSD
 
