@@ -126,9 +126,19 @@ Check once again in your logs to see if everything is working.
 
 When you want to update Lisk-Core you must stop the PM2 process and pull the latest tagged release from GitHub. After that you must start the PM2 process again. You can do it by using the following commands:
 
+### Testnet
 ```
 pm2 stop lisk
 git pull testnet-master
+npm install
+pm2 start lisk
+```
+
+### Mainnet
+
+```
+pm2 stop lisk
+git pull master
 npm install
 pm2 start lisk
 ```
