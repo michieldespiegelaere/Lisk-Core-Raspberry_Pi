@@ -142,7 +142,7 @@ If you run into problems while upgrading it is recommended to check the git stat
 ```
 pm2 stop lisk
 git pull
-git checkout v{version} -b {version}
+git checkout v{version} -b v{version}
 pm2 start lisk
 ```
 
