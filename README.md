@@ -114,6 +114,7 @@ If everything went well you shouldn’t see any error code, only some output lik
 You can also check your logs in logs/lisk.log to see if everything went well.
 
 If this is successful you can create a process with the following command:
+
 `  pm2 start --name lisk app.js -- --network testnet `
 
 Or on mainnet:
@@ -129,17 +130,19 @@ When you want to update Lisk-Core you must stop the PM2 process and pull the lat
 ### Testnet
 ```
 pm2 stop lisk
-git pull testnet-master
-npm install
+git fetch --all
+git checkout tags/v{version}
 pm2 start lisk
 ```
+
+If you run into problems while upgrading it is recommended to check the git status and there might show up some errors.` git status `
 
 ### Mainnet
 
 ```
 pm2 stop lisk
-git pull master
-npm install
+git pull
+git checkout v{version} -b {version}
 pm2 start lisk
 ```
 
