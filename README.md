@@ -9,7 +9,7 @@ Make sure that you have enough space available on your Raspberry pi! I would rec
 After creating your user, you can change to the lisk user if you have sudo rights.
 ` su – lisk `
 If you don’t have sudo rights use the following command to give lisk those rights:
-` usermod -aG sudo lisk ` 
+` sudo usermod -aG sudo lisk ` 
 ### Tool chain components
 Used for compiling dependecies.
 ```
