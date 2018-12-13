@@ -26,7 +26,7 @@ Node.js serves as the underlying engine for code execution.
 Install System wide via package manager, like so:
 ```
 curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
-sudo apt-get install -y nodejs``
+sudo apt-get install -y nodejs
 ```
 ## Installation of the correct node version
 Here I’ve followed custom steps that I’ve used while setting up my betanet node.
