@@ -91,7 +91,7 @@ Both take some time but syncing from the snapshot is a lot faster.
 First you must download the latest snapshot from https://downloads.lisk.io/lisk/test/blockchain.db.gz
 ```
 For example:
-wget http://snapshots.lisk.io.s3-eu-west-1.amazonaws.com/lisk/test/lisk_test_backup-6869616.gz
+wget https://downloads.lisk.io/lisk/test/blockchain.db.gz
 ```
 
 To sync your database after you’ve downloaded the snapshot you must use: 
