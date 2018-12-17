@@ -29,14 +29,18 @@ curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
 ## Installation of the correct node version
-Here I’ve followed custom steps that I’ve used while setting up my betanet node.	
 
 ```
-sudo apt-get install npm	
-sudo npm i -g npm
-sudo npm install -g n	
-sudo n 8.14.0	
+# Install Node Version Manager (NVM)
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
+
+# Rerun Profile script to start NVM
+source .bashrc  # Rerun profile after installing nvm
+
+nvm install 8.14.0
+
 ```
+To check the current node version, use ` node -v `.
 
 ## PM2
 It is recommended to install PM2 for an easier use on your node. You can install it like this.
