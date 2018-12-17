@@ -94,7 +94,10 @@ When you’re in the lisk folder change to the latest release tag (you can check
 
 `git checkout v1.4.0-rc.0 -b v1.4.0-rc.0`
 
-v1.3.0 is the latest version while creating this readme.
+v1.4.0-rc.0 is the latest version while creating this readme.
+
+After cloning the lisk repository and checking out the latest version you must install the new modules. You can do it as follow:
+` npm install `
 
 After lisk is installed and you’re on the right the you can choose to sync from a snapshot or sync from genesis block.
 Both take some time but syncing from the snapshot is a lot faster.
