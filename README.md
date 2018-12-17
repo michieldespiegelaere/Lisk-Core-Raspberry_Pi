@@ -40,7 +40,7 @@ sudo n 8.9.0
 ## PM2
 It is recommended to install PM2 for an easier use on your node. You can install it like this.
 
-` sudo npm -g pm2 `
+` sudo npm install -g pm2 `
 ## PostgreSQL
 The version that is used on the other linux distros is PostgreSQL 10. But because this version isn’t supported on Raspberry pi you must use PostgreSQL 9.6
 ```
