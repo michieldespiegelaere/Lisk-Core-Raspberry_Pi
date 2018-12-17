@@ -31,10 +31,10 @@ sudo apt-get install -y nodejs
 ## Installation of the correct node version
 Here I’ve followed custom steps that I’ve used while setting up my betanet node.
 ```
-Sudo apt-get install npm
-Sudo npm I -g npm
-Sudo npm install -g n
-Sudo n 8.9.0
+sudo apt-get install npm
+sudo npm i -g npm
+sudo npm install -g n
+sudo n 8.9.0
 ```
 
 ## PM2
@@ -82,20 +82,21 @@ After lisk is downloaded change to the lisk directory:
 
 When you’re in the lisk folder change to the latest release tag (you can check this on https://github.com/LiskHQ/lisk/releases):
 
-`git checkout v1.3.0 -b v1.3.0`
+`git checkout v1.3.1-rc.0 -b v1.3.1-rc.0`
 
 v1.3.0 is the latest version while creating this readme.
 
 After lisk is installed and you’re on the right the you can choose to sync from a snapshot or sync from genesis block.
 Both take some time but syncing from the snapshot is a lot faster.
-First you must download the latest snapshot from http://snapshots.lisk.io.s3-eu-west-1.amazonaws.com/index.html?prefix=lisk/test/ 
+First you must download the latest snapshot from https://downloads.lisk.io/lisk/test/blockchain.db.gz
 ```
 For example:
 wget http://snapshots.lisk.io.s3-eu-west-1.amazonaws.com/lisk/test/lisk_test_backup-6869616.gz
 ```
+
 To sync your database after you’ve downloaded the snapshot you must use: 
 
-` gunzip -c lisk_test_backup-6869616.gz | psql lisk_test `
+` gunzip -fcq blockchain.db.gz | psql -d lisk_test `
 
 Note that this will take some time to sync and I would recommend attaching your pi to an external monitor and use the command there. While doing it over ssh I’ve lost the connection with my pi. 
 
