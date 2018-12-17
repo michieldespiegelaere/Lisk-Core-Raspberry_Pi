@@ -29,13 +29,12 @@ curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
 ## Installation of the correct node version
-Here I’ve followed custom steps that I’ve used while setting up my betanet node.
 ```
-sudo apt-get install npm
-sudo npm i -g npm
-sudo npm install -g n
-sudo n 8.9.0
+wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
+nvm install 8.14.0
+
 ```
+Use ` node -v ` to check if you have the correct node version.
 
 ## PM2
 It is recommended to install PM2 for an easier use on your node. You can install it like this.
@@ -82,7 +81,7 @@ After lisk is downloaded change to the lisk directory:
 
 When you’re in the lisk folder change to the latest release tag (you can check this on https://github.com/LiskHQ/lisk/releases):
 
-`git checkout v1.3.1-rc.0 -b v1.3.1-rc.0`
+`git checkout v1.4.0-rc.0 -b v1.4.0-rc.0`
 
 v1.3.0 is the latest version while creating this readme.
 
@@ -131,8 +130,10 @@ When you want to update Lisk-Core you must stop the PM2 process and pull the lat
 ### Testnet
 ```
 pm2 stop lisk
-git fetch --all
-git checkout tags/v{version}
+git fetch
+git checkout v{version} -b v{version}
+rm -rf node_modules
+npm install
 pm2 start lisk
 ```
 
@@ -142,8 +143,10 @@ If you run into problems while upgrading it is recommended to check the git stat
 
 ```
 pm2 stop lisk
-git pull
+git fetch
 git checkout v{version} -b v{version}
+rm -rf node_modules
+npm install
 pm2 start lisk
 ```
 
