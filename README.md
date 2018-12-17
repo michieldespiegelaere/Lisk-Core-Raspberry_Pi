@@ -29,19 +29,23 @@ curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
 ## Installation of the correct node version
-```
-wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
-nvm install 8.14.0
+Here I’ve followed custom steps that I’ve used while setting up my betanet node.	
 
 ```
-Use ` node -v ` to check if you have the correct node version.
+sudo apt-get install npm	wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
+sudo npm i -g npm	nvm install 8.14.0
+sudo npm install -g n	
+sudo n 8.14.0	
+```
 
 ## PM2
 It is recommended to install PM2 for an easier use on your node. You can install it like this.
 
 ` sudo npm install -g pm2 `
+
 ## PostgreSQL
 The version that is used on the other linux distros is PostgreSQL 10. But because this version isn’t supported on Raspberry pi you must use PostgreSQL 9.6
+
 ```
 sudo apt-get purge -y postgres* # remove all already installed postgres versions
 sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
@@ -50,8 +54,11 @@ wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-
 sudo apt update
 sudo apt-get install postgresql-9.6 postgresql-contrib libpq-dev
 ```
+
 When you installed PostgreSQL, you should see it running with the following command:
+
 ` pg_lsclusters `
+
 When you see that your cluster is running you must drop the existing one, and replace it with the locale ` en_US.UTF-8 `
 ```
 sudo pg_dropcluster --stop 9.6 main
