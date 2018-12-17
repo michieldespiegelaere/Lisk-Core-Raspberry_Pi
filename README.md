@@ -32,8 +32,8 @@ sudo apt-get install -y nodejs
 Here I’ve followed custom steps that I’ve used while setting up my betanet node.	
 
 ```
-sudo apt-get install npm	wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
-sudo npm i -g npm	nvm install 8.14.0
+sudo apt-get install npm	
+sudo npm i -g npm
 sudo npm install -g n	
 sudo n 8.14.0	
 ```
